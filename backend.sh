@@ -1,5 +1,5 @@
+#!/bin/bash
 source ./common.sh
-
 
 
 dnf module list nodejs -y
