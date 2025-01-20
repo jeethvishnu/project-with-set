@@ -1,5 +1,9 @@
 #!/bin/bash
-
+set -e
+failure(){
+    echo "error occured at line :$1,error occured: $2"
+}
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
 usr=$(id -u)
 timestamp=$(date +%F-%H-%M-%S)
 script=$(echo $0 | cut -d "." -f1)
@@ -24,3 +28,4 @@ checkroot(){
         echo "success"
     fi
 }
+
