@@ -51,7 +51,7 @@ val $? "unzipping"
 
 npm install
 
-cp /home/ec2-user/project-with-set /etc/systemd/system/backend.service
+cp /home/ec2-user/project-with-set/bk.service /etc/systemd/system/backend.service
 val $? "copying"
 
 systemctl daemon-reload
