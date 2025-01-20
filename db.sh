@@ -27,9 +27,9 @@ val(){
 dnf install mysql-server -y
 val $? "installing"
 
-systemctl restart backend
-systemctl enable backend
-systemctl start backend
+systemctl restart mysqld
+systemctl enable mysqld
+systemctl start mysqld
 
 val $? "enabling and starting"
 
